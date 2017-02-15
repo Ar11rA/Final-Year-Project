@@ -1,0 +1,68 @@
+<html>
+<!--link rel="stylesheet" href="style.css"-->
+<body>
+
+  <div id="locationField">
+    <input type="text" id="autocomplete1" placeholder="Enter your source address" onFocus="geolocate_src()"></input>
+    <input type="text" id="autocomplete2" placeholder="Enter your destination address" onFocus="geolocate_des()"></input>
+  </div>
+  <button id="btn-ola">Click</button>
+  <div>
+    <p id="ola"></p>
+  </div>
+  <div>
+    <p id="uber"></p>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</body>
+<script>
+  var autocomplete1, autocomplete2;
+
+  function initAutocomplete() {
+    autocomplete1 = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete1')),
+      { types: ['geocode'] });
+    autocomplete2 = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete2')),
+      { types: ['geocode'] });
+  }
+  function geolocate_src() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var geolocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        var circle = new google.maps.Circle({
+          center: geolocation,
+          radius: position.coords.accuracy
+        });
+        autocomplete1.setBounds(circle.getBounds());
+       autocomplete1.value=autocomplete1.gm_bindings_.placeIdOnly[9].Dc.j
+      });
+    }
+  }
+
+  function geolocate_des() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var geolocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        var circle = new google.maps.Circle({
+          center: geolocation,
+          radius: position.coords.accuracy
+        });
+        autocomplete2.setBounds(circle.getBounds());
+        autocomplete2.value=autocomplete2.gm_bindings_.placeIdOnly[20].Dc.j
+      });
+    }
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMkK8qXIT_w_pMGer7Bd6cP5eSocoGpKg&libraries=places&callback=initAutocomplete"
+  async defer></script>
+  <script src="apiCalls.js"></script>
+  <script src="apiFetch.js"></script>
+</html>

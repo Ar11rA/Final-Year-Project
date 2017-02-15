@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ar11rA/FinalProject#readme",
   "dependencies": {
+    "express": "^4.14.1",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.30.2"
