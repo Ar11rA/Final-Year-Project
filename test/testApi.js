@@ -1,7 +1,7 @@
 const chai = require('chai')
 const expect = chai.expect
 describe('testing for write', function () {
-  var request = require("request");
+  var request = require('request')
 
   var options = {
     method: 'POST',
@@ -20,7 +20,7 @@ describe('testing for write', function () {
       birthday: 'asasd'
     }
   }
-  it('should return number', function (done) {
+  it('should return error message for 500', function (done) {
     request(options, function (error, response, body) {
       if (error) throw new Error(error)
       expect(body).to.eqls('Internal Server Error')

@@ -1,4 +1,5 @@
-const {displayDataOla, displayDataUber, displayUser, insertUser, deleteUser, updateUser} = require('../dbFinal')
+const {displayDataOla, displayDataUber} = require('../dbFiles/dbCabs.js')
+const { displayUser, insertUser, deleteUser, updateUser} = require('../dbFiles/dbUsers.js')
 const chai = require('chai')
 const expect = chai.expect
 describe('when read function is called', function () {

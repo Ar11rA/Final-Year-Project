@@ -1,4 +1,4 @@
 /node_modules
-/api_key
+gmapsAPI/api_key
 /trial.js
 .eslintrc.json
