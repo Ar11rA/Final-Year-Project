@@ -1,0 +1,33 @@
+{
+  "name": "nodemodules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ar11rA/FinalProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ar11rA/FinalProject/issues"
+  },
+  "homepage": "https://github.com/Ar11rA/FinalProject#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-session": "^1.15.2",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-plugin-react": "^6.9.0"
+  }
+}

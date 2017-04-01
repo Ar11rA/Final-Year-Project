@@ -1,0 +1,17 @@
+{
+  "name": "frontendtest",
+  "homepage": "https://github.com/Ar11rA/FinalProject",
+  "authors": [
+    "Ar11rA <aritra.ghosh2295@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
