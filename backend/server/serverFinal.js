@@ -3,6 +3,8 @@ const session = require('express-session')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const recommendUser = require('../algorithms/CollaborativeFilteringNode/recommendUser')
+const reviewRating = require('../algorithms/node-sentiment/analyse')
+
 const app = express()
 app.use(session({
   secret: 'ssshhhhh',
@@ -51,11 +53,12 @@ app.post('/login', function (req, res) {
 })
 app.get('/home', function (req, res) {
   console.log(req.session)
-  if (req.session.email === undefined)
+  if (req.session.email === undefined) {
     res.sendFile('/Users/aritraaritra/Documents/FinalProject/backend/public/index.html')
-  else{
+  }
+  else {
     let recommendationUser = recommendUser(req.session.email)
-    res.render('home', { user: req.session.email , recommendations: recommendationUser})
+    res.render('home', { user: req.session.email, recommendations: recommendationUser })
   }
 })
 app.get('/logout', function (req, res) {
@@ -67,7 +70,11 @@ app.get('/logout', function (req, res) {
       console.log(req.session)
     }
   })
+})
 
+app.post('/review',function(req,res){
+  const reviewText = req.body.review
+  res.send(reviewRating(reviewText))
 })
 
 app.post('/readOla', function (req, response) {

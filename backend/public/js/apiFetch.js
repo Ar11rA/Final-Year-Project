@@ -1,4 +1,5 @@
 document.getElementById('btn-ola').addEventListener('click',CalcOla)
+document.getElementById('btn-review').addEventListener('click',getReview)
 function CalcOla() {
   let autocompl1 = document.getElementById('autocomplete1')
   let autocompl2 = document.getElementById('autocomplete2')
@@ -32,4 +33,7 @@ function CalcOla() {
   .catch((err)=>console.log(err))
   autocompl1.innerHTML=''
   autocompl2.innerHTML=''
+}
+function getReview(){
+  window.location.href = '/review.html'
 }
