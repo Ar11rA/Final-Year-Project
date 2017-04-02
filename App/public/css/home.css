@@ -1,0 +1,67 @@
+h2 {
+    margin-top: 5%;
+    color: white;
+}
+
+#p-rec {
+    color: white;
+}
+
+#recommended-items {
+    color: white
+}
+
+#autocomplete1,
+#autocomplete2 {
+    display: block;
+    width: 40%;
+    height: 30px;
+    margin: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+#btn-ola,
+#btn-review {
+    margin: 10px;
+    height: 40px;
+    width: 10%;
+    border-radius: 25px;
+    padding: 10px;
+    padding-bottom: 20px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    color: aliceblue;
+    background-color: #262123;
+    letter-spacing: 1px;
+}
+
+body {
+    background-image: url("../images/bg4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    width: 270px;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+}
+
+.prices {
+    display: flex;
+    margin: .25rem;
+    height: 2rem;
+    padding: .25rem;
+    color: white;
+    flex: 1;
+    box-sizing: border-box;
+    width: 20%;
+}

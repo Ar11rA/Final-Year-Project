@@ -1,0 +1,45 @@
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background-image: url("../images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#container {
+    margin-top: 25%;
+}
+
+#txt-review {
+    background: rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#reviewResult {
+    font-size: 20px;
+    color: #365456;
+    font-weight: bold;
+}
+
+#btn-sub-review {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+#feedack {
+    color: #FFF;
+    font-size: 20px;
+}

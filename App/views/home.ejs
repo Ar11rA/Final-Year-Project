@@ -1,15 +1,17 @@
-
 <html>
-<link rel="stylesheet" href="css/style.css">
+<head>
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
 <body>
 <center>
-  <h1>Cab Recommendation Module</h1>
   <h2>  
     Welcome , <%= user %>
   </h2>
-  <p>
+  <p id="p-rec">
   Here are some Recommendations
-  <%= recommendations %>
+  <% recommendations.forEach((item)=>{ %>
+    <p id="recommended-items"><%= item %></p>
+  <% })%>
   </p>  
   <div>
     <input type="text" id="autocomplete1" placeholder="Enter your source address" onFocus="geolocate_src()"></input>
@@ -17,11 +19,13 @@
   </div>
   <button id="btn-ola">Get Prices</button>
   <button id="btn-review">Review</button>
-  <div>
+  <div class="container">
+  <div class="prices">
     <p id="ola"></p>
   </div>
-  <div>
+  <div class="prices">
     <p id="uber"></p>
+  </div>
   </div>
   </center>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
