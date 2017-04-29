@@ -139,7 +139,7 @@ app.post('/insertUser', (req, response) => {
     insUser.then((id) => {
             response.send(id)
         })
-        .catch(() => {
+        .catch((err) => {
             response.sendStatus(500)
         })
 })

@@ -7,22 +7,22 @@
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' />
     <link rel="stylesheet" href="css/login.css" />
 </head>
-<div id="flatix">
+<div id="flatix2">
 
     <body id="myPage">
         <center>
-            <div id="flatix">
+            <div id="flatix2">
                 <header>
                     <h1 class="title"><i class="fa fa-user"></i>Sign In</h1>
                 </header>
                 <section>
                     <input type="text" id='email' name="email" class="mail" placeholder="E-Mail Address" required>
                     <input type="password" id='password' name="password" class="password" placeholder="Password" required>
-                    <a href="#" title="Lost your password?"><br>Forgot your password?</br>
-                    </a>
-                    <br><br><br>
-                    <button type="button" class="login" onclick="validateLogin()" value="SIGN IN">
-                        LOG IN
+                    <input type="address" id='address' name="address" class="mail" placeholder="Address" required>
+                    <input type="date" id='birthday' name="bday" class="mail" placeholder="Birthday" required>
+                    <br>
+                    <button type="button" class="login" onclick="registerUser()" value="SIGN IN">
+                        REGISTER
                     </button>
                     <b><p id='failure'></p></b>
                 </section>
